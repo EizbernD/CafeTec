@@ -1,0 +1,56 @@
+/* Cart.css */
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #f8f9fa; /* Fondo del carrito, puedes cambiarlo por otro color */
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2); /* Sombra para darle profundidad al carrito */
+  padding: 20px; /* Espaciado interno */
+  z-index: 1000; /* Asegura que el carrito esté por encima de otros elementos */
+  transition: transform 0.3s ease-in-out; /* Animación suave al mostrar u ocultar el carrito */
+}
+
+  
+  .cart ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .checkout-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Botón para cerrar el carrito */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .cart ul {
+    list-style: none; /* Elimina los puntos de lista (bullet points) */
+    padding: 0; /* Elimina el padding predeterminado */
+  }
+  
+  .cart ul li {
+    padding: 10px 0; /* Añade espacio vertical entre los elementos de la lista */
+    border-bottom: 1px solid #ddd; /* Línea separadora entre cada elemento */
+  }
+  

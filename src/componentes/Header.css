@@ -1,0 +1,117 @@
+/* Estilos globales del header y otros */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+body {
+    font-family: 'Playfair Display', serif;
+    color: #553429e7;
+}
+.icon {
+    width: 50px;  
+    height: 50px;
+    object-fit: contain;  
+    background: none;  
+    border: none;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.icon:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+/* Estilos del Header */
+.header {
+    display: flex;
+    background-color: #f6f1ecc4;
+    padding: 20px 20px; 
+    align-items: center;
+    height: 200px;
+    justify-content: space-between; 
+    gap: 100px;
+}
+.logo {
+    align-self: flex-end;
+}
+.logo img {
+    width: 200px; 
+    position: relative; 
+    top: 10px; 
+    height: auto; 
+    max-height: 400px; 
+    margin-left: 100px;
+}
+nav {
+    flex-grow: 1;
+    display: flex; 
+    justify-content: space-between; 
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 140px;
+    margin: 0;
+    padding: 0;
+    align-items: center;  
+}
+nav ul li a {
+    font-size: 30px;
+    font-weight: normal;
+    color: #432115;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
+}
+nav ul li a:hover {
+    color: #461300ba; 
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+}
+.icon-container {
+    display: flex; 
+    gap: 80px; 
+    margin-left: auto; 
+    margin-right: 60px;
+}
+
+/* Estilos del Footer */
+/* Estilos del Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f6f1ecc4;
+    color: rgb(54, 49, 49);
+    padding: 30px 0;
+    text-align: center; /* Asegúrate de que el texto esté centrado */
+}
+
+.footer .container {
+    max-width: 1500px;
+    margin: 0 auto; /* Cambia a auto para centrar el contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Alinea los íconos del footer a la izquierda */
+.footer .icon-container {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start; /* Alinea los íconos del footer a la izquierda */
+    margin-left: 0px; /* Añade un margen desde la izquierda */
+    width: 100%; /* Hace que el contenedor ocupe todo el ancho */
+    margin-left: 100px;
+}
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    background-color: #553429e7;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 10px;
+    font-weight: bold;
+}
