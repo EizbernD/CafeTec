@@ -1,3 +1,4 @@
+// MenuPage.js
 import React, { useState, useEffect, useRef } from 'react';
 import './MenuPage.css';
 import CartModal from './CartModal';
@@ -14,12 +15,7 @@ const MenuPage = () => {
         { name: 'Croissant', description: 'Croissant francés, crujiente y mantecoso.', price: 2.30 },
         { name: 'Té Chai Latte', description: 'Té chai especiado con leche espumosa.', price: 2.90 }
     ];
-    <button
-    className="add-to-cart-button"
-    onClick={() => addToCart(item, item.quantity || 1)}
->
-    Agregar al carrito
-</button>
+
     const [cart, setCart] = useState([]);
     const [showButton, setShowButton] = useState(false);
     const [isCartOpen, setIsCartOpen] = useState(false);
@@ -39,6 +35,7 @@ const MenuPage = () => {
                     return [...prevCart, { ...item, quantity }];
                 }
             });
+            setIsCartOpen(true); // Abre el carrito automáticamente cuando se añade un artículo
         }
     };
 
@@ -55,7 +52,6 @@ const MenuPage = () => {
     }, []);
 
     return (
-        
         <div className="menu-container" ref={menuContainerRef}>
             <h1>Menú</h1>
             <ul className="menu-list">
@@ -73,13 +69,25 @@ const MenuPage = () => {
                                 defaultValue="0"
                                 onChange={(e) => item.quantity = parseInt(e.target.value, 10) || 0}
                             />
-                            
+                            <button
+                                className="add-to-cart-button"
+                                onClick={() => addToCart(item, item.quantity || 0)}
+                            >
+                                Agregar al carrito
+                            </button>
                         </div>
                     </li>
                 ))}
             </ul>
 
-            <CartModal isOpen={isCartOpen} cart={cart} onClose={() => setIsCartOpen(false)} />
+            <CartModal
+                isOpen={isCartOpen}
+                cart={cart}
+                onClose={() => setIsCartOpen(false)}
+                removeFromCart={(name) =>
+                    setCart(prevCart => prevCart.filter(item => item.name !== name))
+                }
+            />
         </div>
     );
 };

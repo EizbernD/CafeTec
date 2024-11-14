@@ -68,30 +68,10 @@ nav ul li a:hover {
     margin-left: auto; 
     margin-right: 60px;
 }
+/* Estilos para el Footer */
+/* Estilos para el Footer */
 
-/* Estilos del Footer */
-/* Estilos del Footer */
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f6f1ecc4;
-    color: rgb(54, 49, 49);
-    padding: 30px 0;
-    text-align: center; /* Asegúrate de que el texto esté centrado */
-}
 
-.footer .container {
-    max-width: 1500px;
-    margin: 0 auto; /* Cambia a auto para centrar el contenedor */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Alinea el texto al centro */
-}
-
-/* Alinea los íconos del footer a la izquierda */
 .footer .icon-container {
     display: flex;
     gap: 40px;
@@ -100,18 +80,66 @@ nav ul li a:hover {
     width: 100%; /* Hace que el contenedor ocupe todo el ancho */
     margin-left: 100px;
 }
-.cart-icon {
-    position: relative;
+.footer .container {
+    max-width: 1500px;
+    margin: 0 auto; /* Cambia a auto para centrar el contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:baseline; /* Alinea el texto al centro */
 }
 
-.cart-count {
-    position: absolute;
-    top: 0;
-    right: -5px;
-    background-color: #553429e7;
-    color: white;
-    border-radius: 50%;
-    padding: 5px 8px;
-    font-size: 10px;
-    font-weight: bold;
+
+.footer p {
+  margin: 4px 0;
+  justify-content: left;
+  font-size: 14px; /* Cambia el tamaño de la letra aquí */
+}
+
+.icon-container {
+  display: flex;
+  justify-content: left; /* Centrar los íconos */
+  gap: 15px;
+}
+
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+.horario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 15px; /* Cambia el tamaño de la letra aquí */
+}
+
+.horario-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea el contenido a la derecha */
+  text-align: right; /* Alinea el texto dentro de los elementos a la derecha */
+  font-size: 15px; /* Cambia el tamaño de la letra aquí */
+  padding-right: 120px; /* Ajusta el margen desde el borde derecho */
+}
+
+
+
+
+/* Estilos para el footer */
+.footer {
+  height: 250px; /* Altura fija del footer */
+  background-color: #f6f1ecc4;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  position: relative;
+  z-index: 10; /* Asegura que esté sobre otros elementos */
 }

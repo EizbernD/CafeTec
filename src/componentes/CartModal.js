@@ -38,6 +38,10 @@ const CartModal = ({ isOpen, cart, onClose, removeFromCart }) => {
                         ))}
                     </ul>
                 )}
+
+                {cart.length > 0 && (
+                    <button className="payment-button">Proceder al pago</button>
+                )}
             </div>
         </div>
     );
