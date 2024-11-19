@@ -20,20 +20,21 @@ const MenuPage = () => {
     const [showButton, setShowButton] = useState(false);
     const [isCartOpen, setIsCartOpen] = useState(false);
     const menuContainerRef = useRef(null);
+    const [quantities, setQuantities] = useState({});
 
-    const addToCart = (item, quantity) => {
+    const handleQuantityChange = (itemName, quantity) => {
+        setQuantities((prevQuantities) => ({
+            ...prevQuantities,
+            [itemName]: quantity
+        }));
+    };
+
+    const addToCart = (item) => {
+        const quantity = quantities[item.name] || 0;
         if (quantity > 0) {
             setCart(prevCart => {
-                const existingItem = prevCart.find(cartItem => cartItem.name === item.name);
-                if (existingItem) {
-                    return prevCart.map(cartItem =>
-                        cartItem.name === item.name
-                            ? { ...cartItem, quantity: cartItem.quantity + quantity }
-                            : cartItem
-                    );
-                } else {
-                    return [...prevCart, { ...item, quantity }];
-                }
+                const updatedCart = prevCart.filter(cartItem => cartItem.name !== item.name);
+                return [...updatedCart, { ...item, quantity }];
             });
             setIsCartOpen(true); // Abre el carrito automáticamente cuando se añade un artículo
         }
@@ -66,12 +67,12 @@ const MenuPage = () => {
                                 type="number" 
                                 min="0"
                                 className="quantity-input"
-                                defaultValue="0"
-                                onChange={(e) => item.quantity = parseInt(e.target.value, 10) || 0}
+                                value={quantities[item.name] || 0}
+                                onChange={(e) => handleQuantityChange(item.name, parseInt(e.target.value, 10) || 0)}
                             />
                             <button
                                 className="add-to-cart-button"
-                                onClick={() => addToCart(item, item.quantity || 0)}
+                                onClick={() => addToCart(item)}
                             >
                                 Agregar al carrito
                             </button>

@@ -24,7 +24,8 @@ const Header = ({ cart, removeFromCart }) => {
                             {location.pathname === '/' ? 'Menú' : 'Inicio'}
                         </Link>
                     </li>
-                    <li><a href="#">Conócenos</a></li>
+                    <li><a href="menu">Conócenos</a></li>
+
                     <li><a href="#">Ofertas del día</a></li>
                 </ul>
                 <div className="icon-container">

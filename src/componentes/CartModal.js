@@ -1,9 +1,11 @@
+// CartModal.js
 import React from 'react';
 import './CartModal.css';
 
 const CartModal = ({ isOpen, cart, onClose, removeFromCart }) => {
     if (!isOpen) return null;
 
+    // Calcula el total del carrito sumando el precio de cada producto multiplicado por su cantidad.
     const total = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
 
     return (
@@ -19,6 +21,7 @@ const CartModal = ({ isOpen, cart, onClose, removeFromCart }) => {
                     <h2>Tu Carrito</h2>
                 </div>
 
+                {/* Muestra el total en la parte superior del carrito */}
                 <div className="total-bar">
                     <p>Total: ${total.toFixed(2)}</p>
                 </div>

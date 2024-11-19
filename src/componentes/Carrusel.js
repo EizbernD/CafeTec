@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Carrusel.css'; 
+import './Header.css'; 
 const Carrusel = () => {
   const imagenes = [
     "/images/carrusel1.jpeg",
