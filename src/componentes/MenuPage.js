@@ -1,9 +1,7 @@
-// MenuPage.js
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import './MenuPage.css';
-import CartModal from './CartModal';
 
-const MenuPage = () => {
+const MenuPage = ({ addToCart }) => {
     const items = [
         { name: 'Café Expreso', description: 'Un shot fuerte y concentrado de café.', price: 2.00 },
         { name: 'Café Latte', description: 'Café con leche espumosa.', price: 2.50 },
@@ -16,44 +14,32 @@ const MenuPage = () => {
         { name: 'Té Chai Latte', description: 'Té chai especiado con leche espumosa.', price: 2.90 }
     ];
 
-    const [cart, setCart] = useState([]);
-    const [showButton, setShowButton] = useState(false);
-    const [isCartOpen, setIsCartOpen] = useState(false);
-    const menuContainerRef = useRef(null);
-    const [quantities, setQuantities] = useState({});
+    const [quantities, setQuantities] = useState(
+        items.reduce((acc, item) => {
+            acc[item.name] = 0;
+            return acc;
+        }, {})
+    );
 
-    const handleQuantityChange = (itemName, quantity) => {
-        setQuantities((prevQuantities) => ({
-            ...prevQuantities,
-            [itemName]: quantity
-        }));
-    };
-
-    const addToCart = (item) => {
-        const quantity = quantities[item.name] || 0;
-        if (quantity > 0) {
-            setCart(prevCart => {
-                const updatedCart = prevCart.filter(cartItem => cartItem.name !== item.name);
-                return [...updatedCart, { ...item, quantity }];
-            });
-            setIsCartOpen(true); // Abre el carrito automáticamente cuando se añade un artículo
+    const handleInputChange = (name, value) => {
+        const parsedValue = parseInt(value, 10);
+        if (!isNaN(parsedValue) && parsedValue >= 0) {
+            setQuantities(prevQuantities => ({
+                ...prevQuantities,
+                [name]: parsedValue
+            }));
         }
     };
 
-    const handleScroll = () => {
-        const container = menuContainerRef.current;
-        const isAtBottom = container.scrollTop + container.clientHeight >= container.scrollHeight;
-        setShowButton(isAtBottom);
+    const handleAddToCart = (item) => {
+        if (quantities[item.name] > 0) {
+            addToCart({ ...item, quantity: quantities[item.name] });
+            setQuantities((prev) => ({ ...prev, [item.name]: 0 })); // Reinicia la cantidad después de agregar al carrito
+        }
     };
 
-    useEffect(() => {
-        const container = menuContainerRef.current;
-        container.addEventListener('scroll', handleScroll);
-        return () => container.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
-        <div className="menu-container" ref={menuContainerRef}>
+        <div className="menu-container">
             <h1>Menú</h1>
             <ul className="menu-list">
                 {items.map((item, index) => (
@@ -63,16 +49,19 @@ const MenuPage = () => {
                         <p className="item-price">${item.price.toFixed(2)}</p>
 
                         <div className="quantity-controls">
-                            <input 
-                                type="number" 
+                            <input
+                                type="number"
+                                value={quantities[item.name]}
+                                onChange={(e) => handleInputChange(item.name, e.target.value)}
                                 min="0"
                                 className="quantity-input"
-                                value={quantities[item.name] || 0}
-                                onChange={(e) => handleQuantityChange(item.name, parseInt(e.target.value, 10) || 0)}
                             />
+                        </div>
+
+                        <div className="add-to-cart-container">
                             <button
                                 className="add-to-cart-button"
-                                onClick={() => addToCart(item)}
+                                onClick={() => handleAddToCart(item)}
                             >
                                 Agregar al carrito
                             </button>
@@ -80,15 +69,6 @@ const MenuPage = () => {
                     </li>
                 ))}
             </ul>
-
-            <CartModal
-                isOpen={isCartOpen}
-                cart={cart}
-                onClose={() => setIsCartOpen(false)}
-                removeFromCart={(name) =>
-                    setCart(prevCart => prevCart.filter(item => item.name !== name))
-                }
-            />
         </div>
     );
 };

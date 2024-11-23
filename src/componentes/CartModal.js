@@ -1,12 +1,20 @@
-// CartModal.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CartModal.css';
 
 const CartModal = ({ isOpen, cart, onClose, removeFromCart }) => {
+    const navigate = useNavigate(); // Usamos useNavigate para redirigir
+
     if (!isOpen) return null;
 
-    // Calcula el total del carrito sumando el precio de cada producto multiplicado por su cantidad.
     const total = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
+
+    // Función que maneja el pago (redirige a la página de pago)
+    const handlePayment = () => {
+        // Redirigir a la página de pago
+        navigate('/payment');
+        onClose(); // Cerrar el modal después de redirigir
+    };
 
     return (
         <div className="modal-overlay" onClick={onClose}>
@@ -21,7 +29,6 @@ const CartModal = ({ isOpen, cart, onClose, removeFromCart }) => {
                     <h2>Tu Carrito</h2>
                 </div>
 
-                {/* Muestra el total en la parte superior del carrito */}
                 <div className="total-bar">
                     <p>Total: ${total.toFixed(2)}</p>
                 </div>
@@ -32,18 +39,31 @@ const CartModal = ({ isOpen, cart, onClose, removeFromCart }) => {
                         <p className="empty-cart-text">Tu carrito está vacío</p>
                     </div>
                 ) : (
-                    <ul>
+                    <ul className="cart-items">
                         {cart.map((item, index) => (
-                            <li key={index}>
-                                {item.name} x {item.quantity} - ${item.price.toFixed(2)} c/u
-                                <button onClick={() => removeFromCart(item.name)}>Eliminar</button>
+                            <li key={index} className="cart-item">
+                                <div className="item-details">
+                                    <p>{item.name}</p>
+                                    <p>{item.quantity} x ${item.price.toFixed(2)}</p>
+                                </div>
+                                <button
+                                    className="remove-button"
+                                    onClick={() => removeFromCart(item.name)}
+                                >
+                                    Eliminar
+                                </button>
                             </li>
                         ))}
                     </ul>
                 )}
 
+                {/* Botón para realizar el pago */}
                 {cart.length > 0 && (
-                    <button className="payment-button">Proceder al pago</button>
+                    <div className="payment-container">
+                        <button className="payment-button" onClick={handlePayment}>
+                            Realizar Pago
+                        </button>
+                    </div>
                 )}
             </div>
         </div>

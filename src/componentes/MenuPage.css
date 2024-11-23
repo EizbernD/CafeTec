@@ -1,63 +1,76 @@
+/* Contenedor del menú */
 .menu-container {
-    max-height: 400px; /* Altura máxima del contenedor */
-    overflow-y: auto; /* Habilita el desplazamiento vertical */
-    padding: 30px;
-    border: 1px solid #553429e7;
-    background-color: #ffebd8;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    background-color:#ffebd8;
 }
 
 .menu-list {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
 .menu-item {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #000000;
+    border: 2px solid rgb(100, 134, 137);
+    background-color:#553429e7;
+    margin-bottom: 15px;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
 }
 
-.menu-item:last-child {
-    border-bottom: none;
-}
-
-
-.menu-item h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #333;
+.menu-item h2 {
+    color: white; /* Color del nombre del artículo */
 }
 
 .item-description {
-    margin: 5px 0;
     font-size: 14px;
-    color: #666;
+    color: white; /* Color de la descripción */
 }
 
 .item-price {
-    font-weight: bold;
-    color: #553429;
-    font-size: 16px;
+    font-size: 14px;
+    color: white; /* Color del precio */
 }
 
-/* Controles de cantidad */
+/* Contenedor para la cantidad */
 .quantity-controls {
-    display: flex;
-    align-items: center;
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 
-
-
-
+/* Estilo del input */
 .quantity-input {
-    width: 50px;
-    text-align: center;
-    margin: 0 10px;
-    font-size: 16px;
     padding: 5px;
-    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 60px;
+    text-align: center;
+}
+
+/* Contenedor y estilo del botón "Agregar al carrito" */
+.add-to-cart-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white; /* Color de texto dentro del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #45a049;
 }

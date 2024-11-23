@@ -26,7 +26,9 @@ body {
     height: 200px;
     justify-content: space-between; 
     gap: 100px;
+    border-bottom: 1px solid gray; /* Línea negra de 2px en la parte inferior */
 }
+
 .logo {
     align-self: flex-end;
 }
@@ -133,16 +135,18 @@ nav ul li a:hover {
 
 /* Estilos para el footer */
 .footer {
-  height: 250px; /* Altura fija del footer */
-  background-color: #f6f1ecc4;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  position: relative;
-  z-index: 10; /* Asegura que esté sobre otros elementos */
-}
+    height: 250px; /* Altura fija del footer */
+    background-color: #f6f1ecc4;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    position: relative;
+    z-index: 10; /* Asegura que esté sobre otros elementos */
+    border-top: 1px solid gray; /* Línea negra de 2px en la parte superior del footer */
+  }
+  
 
 .carrusel {
     display: flex;
@@ -155,6 +159,21 @@ nav ul li a:hover {
     position: relative;
     background-color:#ffebd8; /* Color de fondo detrás del carrusel */
     
+}
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    background-color: #553429e7;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 10px;
+    font-weight: bold;
 }
 
 .carrusel img {

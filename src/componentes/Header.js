@@ -1,4 +1,3 @@
-// Header.js
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
@@ -6,7 +5,7 @@ import CartModal from './CartModal';
 
 const Header = ({ cart, removeFromCart }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const location = useLocation();
+    const location = useLocation(); // Hook para obtener la ubicación actual
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -19,13 +18,13 @@ const Header = ({ cart, removeFromCart }) => {
             </div>
             <nav>
                 <ul>
+                    {/* Aquí usamos Link para cambiar de "Menú" a "Inicio" */}
                     <li>
                         <Link to={location.pathname === '/' ? '/menu' : '/'}>
                             {location.pathname === '/' ? 'Menú' : 'Inicio'}
                         </Link>
                     </li>
-                    <li><a href="menu">Conócenos</a></li>
-
+                    <li><a href="#">Conócenos</a></li>
                     <li><a href="#">Ofertas del día</a></li>
                 </ul>
                 <div className="icon-container">
@@ -41,6 +40,7 @@ const Header = ({ cart, removeFromCart }) => {
                     </a>
                 </div>
             </nav>
+            {/* Modal para mostrar el carrito */}
             <CartModal 
                 isOpen={isModalOpen} 
                 cart={cart} 
