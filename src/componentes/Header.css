@@ -1,219 +1,479 @@
 /* Estilos globales del header y otros */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+/* Importa la fuente 'Playfair Display' desde Google Fonts con los pesos 400 y 700 */
 body {
-    font-family: 'Playfair Display', serif;
-    color: #553429e7;
+    font-family: 'Playfair Display', serif; /* Aplica la fuente Playfair Display a todo el cuerpo del documento */
+    color: #553429e7; /* Establece el color de texto a un tono marrón */
 }
 .icon {
-    width: 50px;  
-    height: 50px;
-    object-fit: contain;  
-    background: none;  
-    border: none;  
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 50px;  /* Ancho de los íconos */
+    height: 50px; /* Altura de los íconos */
+    object-fit: contain;  /* Ajusta la imagen dentro del contenedor manteniendo sus proporciones */
+    background: none;  /* Elimina cualquier fondo */
+    border: none;  /* Elimina los bordes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para los efectos de transformación y sombra */
 }
 .icon:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.1); /* Aumenta el tamaño del ícono al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra al ícono */
 }
-
 /* Estilos del Header */
 .header {
-    display: flex;
-    background-color: #f6f1ecc4;
-    padding: 20px 20px; 
-    align-items: center;
-    height: 200px;
-    justify-content: space-between; 
-    gap: 100px;
-    border-bottom: 1px solid gray; /* Línea negra de 2px en la parte inferior */
+    display: flex; /* Utiliza un diseño flexible para el header */
+    background-color: #f6f1ecc4; /* Color de fondo del header */
+    padding: 20px 20px;  /* Espaciado interno */
+    align-items: center; /* Centra los elementos en el eje vertical */
+    height: 200px; /* Altura fija del header */
+    justify-content: space-between; /* Espacio distribuido entre los elementos del header */
+    gap: 100px; /* Espacio entre los elementos dentro del header */
+    border-bottom: 1px solid gray; /* Línea gris en la parte inferior del header */
 }
-
 .logo {
-    align-self: flex-end;
+    align-self: flex-end; /* Alinea la imagen del logo al final del contenedor */
 }
 .logo img {
-    width: 200px; 
-    position: relative; 
-    top: 10px; 
-    height: auto; 
-    max-height: 400px; 
-    margin-left: 100px;
+    width: 200px; /* Ancho de la imagen del logo */
+    position: relative;  /* Relativa para poder moverla con respecto a su posición original */
+    top: 10px;  /* Desplazamiento hacia abajo */
+    height: auto;  /* Mantiene la proporción de la altura */
+    max-height: 400px; /* Altura máxima del logo */
+    margin-left: 100px; /* Desplazamiento hacia la derecha */
 }
 nav {
-    flex-grow: 1;
-    display: flex; 
-    justify-content: space-between; 
+    flex-grow: 1; /* El nav ocupa el espacio disponible */
+    display: flex; /* Utiliza un diseño flexible */
+    justify-content: space-between;  /* Distribuye el espacio entre los elementos dentro del nav */
 }
 nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 140px;
-    margin: 0;
-    padding: 0;
-    align-items: center;  
+    list-style-type: none; /* Elimina los puntos de las listas */
+    display: flex; /* Usa flexbox */
+    gap: 140px; /* Espacio entre los elementos de la lista */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina el padding */
+    align-items: center;  /* Centra los elementos en el eje vertical */
 }
 nav ul li a {
-    font-size: 30px;
-    font-weight: normal;
-    color: #432115;
-    text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease; 
+    font-size: 30px; /* Tamaño de fuente de los enlaces */
+    font-weight: normal; /* Peso de la fuente */
+    color: #432115; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: color 0.3s ease, text-shadow 0.3s ease;  /* Transición suave para el color y la sombra */
 }
 nav ul li a:hover {
-    color: #461300ba; 
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    color: #461300ba;  /* Color del enlace al pasar el mouse */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  /* Sombra en el texto al pasar el mouse */
 }
 .icon-container {
-    display: flex; 
-    gap: 80px; 
-    margin-left: auto; 
-    margin-right: 60px;
+    display: flex; /* Utiliza un diseño flexible para los íconos */
+    gap: 80px; /* Espacio entre los íconos */
+    margin-left: auto; /* Desplazamiento automático a la izquierda */
+    margin-right: 60px; /* Desplazamiento hacia la derecha */
 }
 /* Estilos para el Footer */
-/* Estilos para el Footer */
-
-
 .footer .icon-container {
-    display: flex;
-    gap: 40px;
-    justify-content: flex-start; /* Alinea los íconos del footer a la izquierda */
-    margin-left: 0px; /* Añade un margen desde la izquierda */
-    width: 100%; /* Hace que el contenedor ocupe todo el ancho */
-    margin-left: 100px;
+    display: flex; /* Usa flexbox para los íconos del footer */
+    gap: 40px; /* Espacio entre los íconos */
+    justify-content: flex-start; /* Alinea los íconos a la izquierda */
+    margin-left: 0px; /* Sin margen a la izquierda */
+    width: 100%; /* El contenedor ocupa todo el ancho */
+    margin-left: 100px; /* Desplaza los íconos 100px a la izquierda */
 }
 .footer .container {
-    max-width: 1500px;
-    margin: 0 auto; /* Cambia a auto para centrar el contenedor */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align:baseline; /* Alinea el texto al centro */
+    max-width: 1500px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    display: flex; /* Flexbox para la distribución */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos */
+    text-align: baseline; /* Alinea el texto con la línea base */
 }
-
-
 .footer p {
-  margin: 4px 0;
-  justify-content: left;
-  font-size: 14px; /* Cambia el tamaño de la letra aquí */
+  margin: 4px 0; /* Márgenes alrededor del párrafo */
+  justify-content: left; /* Justifica el contenido a la izquierda */
+  font-size: 14px; /* Tamaño de la fuente */
 }
-
 .icon-container {
-  display: flex;
-  justify-content: left; /* Centrar los íconos */
-  gap: 15px;
+  display: flex; /* Flexbox para los íconos dentro del footer */
+  justify-content: left; /* Centra los íconos */
+  gap: 15px; /* Espacio entre los íconos */
 }
-
-
 .footer-info {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 20px;
-  max-width: 800px;
+  display: flex; /* Usa flexbox para los elementos de información */
+  justify-content: space-between; /* Espacio entre los elementos */
+  width: 100%; /* Ancho total */
+  margin-top: 20px; /* Margen superior */
+  max-width: 800px; /* Ancho máximo */
 }
-
 .horario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-size: 15px; /* Cambia el tamaño de la letra aquí */
+  display: flex; /* Flexbox para el horario */
+  flex-direction: column; /* Alineación en columna */
+  align-items: center; /* Centra los elementos */
+  text-align: center; /* Alinea el texto al centro */
+  font-size: 15px; /* Tamaño de la fuente */
 }
-
 .horario-derecha {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Flexbox para la sección de horario a la derecha */
+  flex-direction: column; /* Alineación en columna */
   align-items: flex-end; /* Alinea el contenido a la derecha */
-  text-align: right; /* Alinea el texto dentro de los elementos a la derecha */
-  font-size: 15px; /* Cambia el tamaño de la letra aquí */
-  padding-right: 120px; /* Ajusta el margen desde el borde derecho */
+  text-align: right; /* Alinea el texto a la derecha */
+  font-size: 15px; /* Tamaño de la fuente */
+  padding-right: 120px; /* Desplazamiento hacia la derecha */
 }
-
-
-
-
-/* Estilos para el footer */
 .footer {
-    height: 250px; /* Altura fija del footer */
-    background-color: #f6f1ecc4;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    position: relative;
-    z-index: 10; /* Asegura que esté sobre otros elementos */
-    border-top: 1px solid gray; /* Línea negra de 2px en la parte superior del footer */
-  }
-  
-
+    height: 250px; /* Altura del footer */
+    background-color: #f6f1ecc4; /* Color de fondo del footer */
+    color: black; /* Color del texto */
+    display: flex; /* Flexbox para el footer */
+    align-items: center; /* Centra los elementos */
+    justify-content: center; /* Centra el contenido */
+    font-size: 18px; /* Tamaño de la fuente */
+    position: relative; /* Relativo para ajustar la posición */
+    z-index: 10; /* Asegura que el footer se muestre sobre otros elementos */
+    border-top: 1px solid gray; /* Línea gris en la parte superior del footer */
+}
+/* Estilos para el Carrusel */
 .carrusel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: calc(100vh - 390px - 100px); /* Ajustar según las alturas del header (250px) y footer (100px) */
-    position: relative;
-    background-color:#ffebd8; /* Color de fondo detrás del carrusel */
-    
+    display: flex; /* Usa flexbox para el carrusel */
+    flex-direction: column; /* Alineación en columna */
+    align-items: center; /* Centra los elementos */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+    height: calc(100vh - 390px - 100px); /* Ajusta la altura según las dimensiones del header y footer */
+    position: relative; /* Relativo para ajustar elementos dentro de él */
+    background-color: #ffebd8; /* Color de fondo del carrusel */
 }
 .cart-icon {
-    position: relative;
+    position: relative; /* Posición relativa para el icono del carrito */
 }
-
 .cart-count {
-    position: absolute;
-    top: 0;
-    right: -5px;
-    background-color: #553429e7;
-    color: white;
-    border-radius: 50%;
-    padding: 5px 8px;
-    font-size: 10px;
-    font-weight: bold;
+    position: absolute; /* Posiciona el contador en el carrito de forma absoluta */
+    top: 0; /* Coloca el contador en la parte superior */
+    right: -5px; /* Desplaza el contador ligeramente hacia la derecha */
+    background-color: #553429e7; /* Color de fondo del contador */
+    color: white; /* Color del texto dentro del contador */
+    border-radius: 50%; /* Hace que el contador tenga forma circular */
+    padding: 5px 8px; /* Ajusta el tamaño del contador */
+    font-size: 10px; /* Tamaño de la fuente */
+    font-weight: bold; /* Fuente en negrita */
 }
-
 .carrusel img {
-    width: 90%; 
-    margin-top: 70px;
-    height: 90%; 
-    max-width: 100%;
-    object-fit: contain; 
+    width: 90%; /* La imagen ocupa el 90% del ancho */
+    margin-top: 70px; /* Desplaza la imagen hacia abajo */
+    height: 90%; /* La altura es el 90% de su contenedor */
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    object-fit: contain; /* Ajusta la imagen manteniendo sus proporciones */
 }
 button {
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    background-color: rgba(255, 255, 255, 0); /* Fondo semi-transparente */
-    border: none;
-    border-radius: 50%; 
-    padding: 10px; 
-    cursor: pointer;
-    font-size: 50px; 
-    color: #ffffff00;
+    position: absolute;  /* Posiciona los botones de forma absoluta dentro del carrusel */
+    top: 50%; /* Los coloca verticalmente en el centro */
+    transform: translateY(-50%); /* Ajusta el botón para que quede centrado */
+    background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    padding: 10px; /* Ajusta el tamaño del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    font-size: 50px; /* Tamaño del icono dentro del botón */
+    color: #ffffff00; /* Color del icono, con opacidad 0 */
 }
-
 button:nth-of-type(1) { 
-    left: 15px; 
+    left: 15px;  /* Posición del botón izquierdo */
 }
 button:nth-of-type(2) { 
-    right: 15px; 
+    right: 15px;  /* Posición del botón derecho */
 }
 .indicadores {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px; 
-    z-index: 1;
-    position: relative; 
+    display: flex;  /* Usa flexbox para los indicadores */
+    justify-content: center; /* Los centra en el eje horizontal */
+    margin-top: 50px;  /* Margen superior */
+    z-index: 1; /* Asegura que los indicadores estén sobre otros elementos */
+    position: relative;  /* Relativo para que se ajuste con respecto a su contenedor */
 }
 .indicador {
-    font-size: 20px;
-    margin: 0 5px;
-    cursor: pointer;
+    font-size: 20px; /* Tamaño de la fuente para los indicadores */
+    margin: 0 5px; /* Espacio entre los indicadores */
+    cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre los indicadores */
 }
 .indicador.activo {
-    color: #007bff;
+    color: #007bff; /* Color azul para el indicador activo */
+}
+/* Estilos del overlay del modal (fondo transparente) */
+.modal-overlay {
+    position: fixed; /* Fija la posición en la pantalla */
+    top: 0; /* Coloca el modal al principio de la pantalla */
+    left: 0; /* Coloca el modal al principio en el eje horizontal */
+    right: 0; /* Coloca el modal al final de la pantalla */
+    bottom: 0; /* Coloca el modal al final en el eje vertical */
+    background: rgba(111, 111, 111, 0.7); /* Fondo semi-transparente */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+}
+/* Estilo del contenido del modal */
+.modal-content {
+    background: white; /* Fondo blanco para el contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 50px; /* Bordes redondeados */
+    width: 340px; /* Ancho del modal */
+    height: 530px; /* Altura del modal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra del modal */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+}
+/* Estilos de la cabecera del modal */
+.modal-header {
+    display: flex; /* Utiliza flexbox para la disposición */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+}
+/* Estilo del ícono de cerrar */
+.close-icon {
+    cursor: pointer; /* Cambia el cursor a mano al pasar el mouse */
+}
+/* Separador entre elementos dentro del modal */
+.separator {
+    width: 1px; /* Grosor del separador */
+    height: 40px; /* Altura del separador */
+    background-color: #ccc; /* Color del separador */
+    margin: 0 10px; /* Espacio alrededor del separador */
+}
+/* Estilo del nombre de sesión de usuario */
+.user-session {
+    font-size: 18px; /* Tamaño de la fuente */
+    color: #432115; /* Color del texto */
+}
+/* Estilos del botón de cerrar */
+.close-button {
+    margin-top: 20px; /* Margen superior */
+    background-color: #ff5555; /* Fondo rojo para el botón */
+    color: white; /* Color blanco para el texto */
+    border: none; /* Elimina el borde */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor a mano */
+    border-radius: 5px; /* Bordes redondeados */
+}
+/* Efecto al pasar el mouse sobre el botón de cerrar */
+.close-button:hover {
+    background-color: #ff3333; /* Cambio de color a rojo más oscuro */
+}
+/* Título del modal */
+.modal-title {
+    display: flex; /* Flexbox para disposición */
+    justify-content: space-between; /* Espacio entre el título y los botones */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-bottom: 20px; /* Margen inferior */
+}
+/* Estilo del botón para volver a comprar */
+.buy-again-button {
+    background-color: #432115; /* Fondo marrón */
+    color: rgb(8, 8, 8); /* Color del texto */
+    border: none; /* Elimina el borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano */
+    transition: background-color 0.3s; /* Transición para cambio de color */
+}
+/* Estilo del texto para el botón de volver a comprar */
+.buy-again-text {
+    color: #432115; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor a mano */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Texto en negrita */
+    margin-left: 10px; /* Margen izquierdo */
+}
+/* Efecto al pasar el mouse sobre el texto de volver a comprar */
+.buy-again-text:hover {
+    color: #007BFF; /* Color azul al pasar el mouse */
+}
+/* Efecto al pasar el mouse sobre el botón de volver a comprar */
+.buy-again-button:hover {
+    background-color: #45a049; /* Cambio de color a verde al pasar el mouse */
+}
+/* Estilo cuando el carrito está vacío */
+.empty-cart {
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Centra los íconos verticalmente */
+    gap: 30px; /* Espacio entre los íconos */
+    justify-content: center; /* Centra el contenido */
+    top: 100px; /* Desplaza el contenido hacia abajo */
+}
+/* Estilo del ícono cuando el carrito está vacío */
+.empty-cart-icon {
+    width: 100px; /* Ancho del ícono */
+    height: auto; /* Mantiene la proporción del ícono */
+}
+/* Estilo del texto cuando el carrito está vacío */
+.empty-cart-text {
+    text-align: center; /* Alineación centrada */
+    font-size: 18px; /* Tamaño de la fuente */
+    color: #432115; /* Color del texto */
+}
+/* Barra con el total del carrito */
+.total-bar {
+    background-color: #432115; /* Fondo marrón */
+    color: white; /* Color blanco para el texto */
+    padding: 3px; /* Espaciado interno */
+    line-height: 0.1; /* Ajusta la altura de la línea */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Alineación centrada */
+    width: calc(100% - 10px); /* Ancho ajustado */
+    position: relative; /* Posición relativa */
+    top: -25px; /* Desplazamiento hacia arriba */
+    margin: 0 auto; /* Centra la barra */
+}
+/* Estilos para los elementos del carrito */
+.cart-items {
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+}
+/* Estilo de cada ítem en el carrito */
+.cart-item {
+    display: flex; /* Utiliza flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin-bottom: 10px; /* Margen inferior */
+}
+/* Estilo de los detalles de cada ítem */
+.item-details p {
+    margin: 0; /* Elimina el margen */
+    font-size: 14px; /* Tamaño de la fuente */
+}
+/* Estilo del botón para eliminar un ítem del carrito */
+.remove-button {
+    background-color: #ff4d4f; /* Fondo rojo */
+    border: none; /* Elimina el borde */
+    color: white; /* Color blanco para el texto */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor a mano */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición para cambio de color */
+}
+/* Efecto al pasar el mouse sobre el botón de eliminar */
+.remove-button:hover {
+    background-color: #d9363e; /* Color más oscuro al pasar el mouse */
+}
+/* Estilo del contenedor de pago */
+.payment-container {
+    margin-top: 20px; /* Margen superior */
+    text-align: center; /* Alineación centrada */
+}
+/* Estilo del botón de pago */
+.payment-button {
+    background-color: #4CAF50; /* Fondo verde */
+    border: none; /* Elimina el borde */
+    color: white; /* Color blanco para el texto */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a mano */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+}
+/* Efecto al pasar el mouse sobre el botón de pago */
+.payment-button:hover {
+    background-color: #45a049; /* Cambio de color a verde oscuro */
+}
+/* Contenedor del menú */
+.menu-container {
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    background-color: #ffebd8; /* Fondo de color claro */
+}
+/* Lista del menú */
+.menu-list {
+    list-style-type: none; /* Sin puntos de lista */
+    padding: 0;
+}
+/* Item de menú */
+.menu-item {
+    border: 2px solid rgb(100, 134, 137); /* Borde en color gris azulado */
+    background-color: #553429e7; /* Fondo de color marrón transparente */
+    margin-bottom: 15px; /* Espaciado inferior */
+    padding: 25px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    position: relative; /* Posición relativa para elementos flotantes */
+    display: flex;
+    flex-direction: column; /* Disposición en columnas */
+    justify-content: space-between; /* Espacio entre los elementos */
+    height: 250px;
+}
+.menu-item h2 {
+    color: white; /* Nombre del artículo en color blanco */
+}
+.item-description {
+    font-size: 14px; /* Tamaño de la fuente de la descripción */
+    color: white; /* Descripción en color blanco */
+}
+.item-price {
+    font-size: 14px; /* Tamaño de la fuente del precio */
+    color: white; /* Precio en color blanco */
+}
+/* Contenedor para la cantidad */
+.quantity-controls {
+    margin-top: 10px; /* Espaciado superior */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+/* Estilo del input de cantidad */
+.quantity-input {
+    padding: 5px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de la fuente */
+    width: 60px; /* Ancho del input */
+    text-align: center; /* Centra el texto */
+}
+/* Contenedor y estilo del botón "Agregar al carrito" */
+.add-to-cart-container {
+    margin-top: auto; /* Alinea el botón en la parte inferior */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%;
+}
+.add-to-cart-button {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Color de texto dentro del botón */
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a mano */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición para cambiar de color al pasar el mouse */
+}
+.add-to-cart-button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+/* Contenedor del formulario de pago */
+.payment-container {
+    padding: 20px; /* Espaciado interno del contenedor */
+    max-width: 600px; /* Ancho máximo del contenedor para adaptarse a dispositivos grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+/* Estilo del formulario dentro del contenedor de pago */
+.payment-container form {
+    display: flex; /* Utiliza flexbox para disposición */
+    flex-direction: column; /* Disposición en columnas */
+}
+/* Estilo de las etiquetas de los campos en el formulario */
+.payment-container label {
+    margin: 10px 0 5px; /* Espacio arriba y abajo de las etiquetas */
+    font-weight: bold; /* Hace las etiquetas en negrita */
+}
+/* Estilo de los campos de entrada de texto */
+.payment-container input {
+    padding: 8px; /* Espaciado interno de los campos de texto */
+    margin-bottom: 15px; /* Espacio debajo de cada campo de entrada */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+/* Estilo del botón de envío del formulario */
+.payment-container button {
+    background-color: #4CAF50; /* Fondo verde para el botón */
+    border: none; /* Elimina el borde del botón */
+    color: white; /* Texto blanco dentro del botón */
+    padding: 10px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de la fuente dentro del botón */
+    cursor: pointer; /* Apunta a que el botón es clicable */
+    border-radius: 5px; /* Bordes redondeados */
+}
+/* Efecto al pasar el mouse sobre el botón */
+.payment-container button:hover {
+    background-color: #45a049; /* Fondo verde más oscuro cuando el mouse pasa sobre el botón */
 }

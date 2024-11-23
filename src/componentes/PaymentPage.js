@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import './PaymentPage.css';
+import './Header.css';
 
 // Cargar Stripe en tu aplicación
 const stripePromise = loadStripe('tu-clave-publica-de-stripe'); // Reemplaza con tu clave pública de Stripe

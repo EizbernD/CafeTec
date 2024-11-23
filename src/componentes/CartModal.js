@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CartModal.css';
+import './Header.css';
 
 const CartModal = ({ isOpen, cart, onClose, removeFromCart }) => {
     const navigate = useNavigate(); // Usamos useNavigate para redirigir

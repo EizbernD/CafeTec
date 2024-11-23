@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './MenuPage.css';
+import './Header.css';
 
 const MenuPage = ({ addToCart }) => {
     const items = [
