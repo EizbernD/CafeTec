@@ -3,15 +3,15 @@ import './Header.css';
 
 const MenuPage = ({ addToCart }) => {
     const items = [
-        { name: 'Café Expreso', description: 'Un shot fuerte y concentrado de café.', price: 2.00 },
-        { name: 'Café Latte', description: 'Café con leche espumosa.', price: 2.50 },
-        { name: 'Cappuccino', description: 'Café con una capa espesa de espuma de leche.', price: 2.80 },
-        { name: 'Té Verde', description: 'Infusión de té verde, rico en antioxidantes.', price: 2.20 },
-        { name: 'Chocolate Caliente', description: 'Bebida caliente de chocolate cremoso.', price: 2.70 },
-        { name: 'Pastel de Queso', description: 'Rebanada de pastel de queso suave y cremoso.', price: 3.00 },
-        { name: 'Muffin de Arándano', description: 'Muffin esponjoso con arándanos frescos.', price: 2.50 },
-        { name: 'Croissant', description: 'Croissant francés, crujiente y mantecoso.', price: 2.30 },
-        { name: 'Té Chai Latte', description: 'Té chai especiado con leche espumosa.', price: 2.90 }
+        { name: 'Café Expreso', description: 'Un shot fuerte y concentrado de café.', price: 20.00 },
+        { name: 'Café Latte', description: 'Café con leche espumosa.', price: 35.00 },
+        { name: 'Cappuccino', description: 'Café con una capa espesa de espuma de leche.', price: 45.00 },
+        { name: 'Té Verde', description: 'Infusión de té verde, rico en antioxidantes.', price: 15.00 },
+        { name: 'Chocolate Caliente', description: 'Bebida caliente de chocolate cremoso.', price: 25.00 },
+        { name: 'Pastel de Queso', description: 'Rebanada de pastel de queso suave y cremoso.', price: 55.00 },
+        { name: 'Muffin de Arándano', description: 'Muffin esponjoso con arándanos frescos.', price: 45.00 },
+        { name: 'Croissant', description: 'Croissant francés, crujiente y mantecoso.', price: 30.00 },
+        { name: 'Té Chai Latte', description: 'Té chai especiado con leche espumosa.', price: 20.00 }
     ];
 
     const [quantities, setQuantities] = useState(

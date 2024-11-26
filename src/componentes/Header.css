@@ -335,8 +335,10 @@ button:nth-of-type(2) {
 }
 /* Estilo de los detalles de cada ítem */
 .item-details p {
+    font-family: 'Playfair Display' Helvetica;
     margin: 0; /* Elimina el margen */
-    font-size: 14px; /* Tamaño de la fuente */
+    font-size: 20px; /* Tamaño de la fuente */
+    color: black;
 }
 /* Estilo del botón para eliminar un ítem del carrito */
 .remove-button {
